@@ -1,4 +1,6 @@
 <div *ngIf="!showThanks">
+  <h1>⚠️Zakończyliśmy już zbieranie odpowiedzi, wyniki pojawią się niedługo⚠️</h1>
+  <hr>
   <h1>Postrzeganie poglądów politycznych kandydatów na prezydenta</h1>
   <h3>Ustaw poniższych kandydatów na kompasie politycznym, tak, jak według Ciebie wyglądają ich poglądy i odpowiedz na pytania poniżej</h3>
   <h3>Złap i przeciągnij zdjęcie kandydata, aby zmienić jego pozycję</h3>
@@ -48,7 +50,7 @@
         <span matSuffix>/10</span>
       </mat-form-field>
       
-      <button mat-flat-button color="primary"  (click)="saveData()" [disabled]="form.invalid || saving" type="submit">Wyślij</button>
+      <button mat-flat-button color="primary"  (click)="saveData()" [disabled]="form.invalid || saving || true" type="submit">Wyślij</button>
     </form>
 </div>
 
